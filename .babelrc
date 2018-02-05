@@ -8,6 +8,7 @@
     ["module-alias", [
       {"src": "./app/", "expose": "app"},
       {"src": "./app/routes/", "expose": "routes"},
+      {"src": "./app/models/", "expose": "models"},
       {"src": "./app/controllers/", "expose": "controllers"},
       {"src": "./app/services/", "expose": "services"},
       {"src": "./", "expose": "~" }
