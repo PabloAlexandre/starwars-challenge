@@ -4,7 +4,7 @@ services:
     container_name: starwars-api
     build:
       context: ./
-      dockerfile: ./Dockerfile
+      dockerfile: ./settings/Dockerfile.dev
     volumes:
       -  ./:/starwars
     ports:

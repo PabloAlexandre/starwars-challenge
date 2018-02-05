@@ -1,5 +1,9 @@
 import redis from 'redis'
-const client = redis.createClient('9830', 'redis')
+
+const address = process.env.REDIS_ADDR || 'redis'
+const port = process.env.REDIS_PORT || '9830'
+const client = redis.createClient(port, address)
+
 const app = {
   client,
   set: async (key, value, expiresIn = false) => {

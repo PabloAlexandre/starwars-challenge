@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "nodemon app/index.js --exec babel-node",
     "lint": "eslint ./app/",
+    "build": " babel ./app/ --out -d ./build/ --ignore '**/__tests__/' && cp -R ./package.json ./build/",
+    "start": "ENV=production node build/index.js",
     "test": "jest"
   },
   "repository": {
@@ -34,6 +36,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-module-alias": "^1.6.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-plugin-wildcard": "^4.0.0",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.17.0",
