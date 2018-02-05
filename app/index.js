@@ -1,7 +1,9 @@
 import koa from 'koa'
+import * as routes from 'routes/'
+
 const app = new koa()
-app.use(ctx => {
-  ctx.body = 'Hello'
+Object.keys(routes).forEach(key => {
+  app.use(routes[key])
 })
 
 const port = process.env.ENV || 3000

@@ -2,6 +2,8 @@
   "presets": ["env"],
   "plugins": ["wildcard", ["module-alias", [
       {"src": "./app/", "expose": "app"},
+      {"src": "./app/routes/", "expose": "routes"},
+      {"src": "./app/controllers/", "expose": "controllers"},
       {"src": "./", "expose": "~" }
     ]]]
 }
