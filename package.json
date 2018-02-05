@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/PabloAlexandre/starwars-challenge#readme",
   "dependencies": {
+    "axios": "^0.17.1",
+    "babel-preset-stage-2": "^6.24.1",
     "koa": "^2.4.1",
     "koa-body": "^2.5.0",
     "koa-router": "^7.4.0",
