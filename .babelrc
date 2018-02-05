@@ -1,0 +1,15 @@
+{
+  "presets": ["env"],
+  "plugins": ["wildcard",
+    ["transform-runtime", {
+      "polyfill": false,
+      "regenerator": true
+    }],
+    ["module-alias", [
+      {"src": "./app/", "expose": "app"},
+      {"src": "./app/routes/", "expose": "routes"},
+      {"src": "./app/controllers/", "expose": "controllers"},
+      {"src": "./app/services/", "expose": "services"},
+      {"src": "./", "expose": "~" }
+    ]]]
+}
