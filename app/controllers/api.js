@@ -54,5 +54,16 @@ export default {
     }
 
     ctx.body = {planet: name, weather, terrain, id: planet._id}
+  },
+  delete: async (ctx) => {
+    const { field } = ctx.params
+    const findBy = !mongoose.Types.ObjectId.isValid(field) ? {
+      name: field
+    } : {
+      _id: field
+    }
+
+    const savedPlanets = await Planet.remove(findBy)
+    ctx.body = 'Deleted Successfully'
   }
 }
