@@ -1,5 +1,5 @@
 export default {
-  home: async ctx => {
+  home: async (ctx) => {
     ctx.body = 'homepage'
   }
 }
