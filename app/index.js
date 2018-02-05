@@ -1,6 +1,6 @@
 import koa from 'koa'
 import * as routes from 'routes/'
-
+import * as services from 'services/'
 const app = new koa()
 Object.keys(routes).forEach(key => {
   app.use(routes[key])
