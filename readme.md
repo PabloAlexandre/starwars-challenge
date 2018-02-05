@@ -14,7 +14,7 @@ After that, this API will be running on port 3000
 
 ## Endpoints
 
-You can access a Postman collection here:
+You can access a Postman collection here. The environment variable `domain` is `localhost:3000`
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5f89fc826929ef2aa0d9)
 
