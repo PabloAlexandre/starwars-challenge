@@ -1,0 +1,7 @@
+{
+  "presets": ["env"],
+  "plugins": ["wildcard", ["module-alias", [
+      {"src": "./app/", "expose": "app"},
+      {"src": "./", "expose": "~" }
+    ]]]
+}

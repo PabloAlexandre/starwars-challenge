@@ -1,0 +1,39 @@
+{
+  "name": "starwars-challenge",
+  "version": "1.0.0",
+  "description": "Build an Star Wars API in REST to register and list some planets of all movies and universe Edit",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app/index.js --exec babel-node",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloAlexandre/starwars-challenge.git"
+  },
+  "keywords": [
+    "starwars",
+    "api",
+    "planets",
+    "movies"
+  ],
+  "author": "Pablo Alexandre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PabloAlexandre/starwars-challenge/issues"
+  },
+  "homepage": "https://github.com/PabloAlexandre/starwars-challenge#readme",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-body": "^2.5.0",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-module-alias": "^1.6.0",
+    "babel-plugin-wildcard": "^4.0.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.1.4",
+    "nodemon": "^1.14.12"
+  }
+}
