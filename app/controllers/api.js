@@ -1,7 +1,38 @@
 import { validate } from 'app/helpers'
+import mongoose from 'mongoose'
 import Planet from 'models/planet'
+import planets from 'services/swapi/planets'
+
+const formatPlanets = async (allPlanets) => {
+  const indexedPlanets = await planets.get()
+
+  return allPlanets.map((planet) => {
+    const {_id: id, name, weather, terrain} = planet
+    const p = indexedPlanets.find((v) => planet.name === v.name)
+    const movies = p ? p.films.length : 0
+
+    return {
+      id, name, weather, terrain, movies
+    }
+  })
+}
 
 export default {
+  search: async (ctx) => {
+    const { field } = ctx.params
+    const findBy = !mongoose.Types.ObjectId.isValid(field) ? {
+      name: field
+    } : {
+      _id: field
+    }
+
+    const savedPlanets = await Planet.find(findBy)
+    ctx.body = await formatPlanets(savedPlanets)
+  },
+  get: async (ctx) => {
+    const savedPlanets = await Planet.find({})
+    ctx.body = await formatPlanets(savedPlanets)
+  },
   save: async (ctx) => {
     const {request: {body}} = ctx
     const properties = [
