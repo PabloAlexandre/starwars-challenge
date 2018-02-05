@@ -4,7 +4,13 @@ An Star Wars API in REST to register and list some planets of all movies and uni
 ## Getting started
 To run this app, you have to install previously [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
-After install both, run this command in root:
+After install both, run this commands in root:
+
+```
+yarn install | npm install
+```
+
+AND
 
 ```
 docker-compose up -d
